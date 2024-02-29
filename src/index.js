@@ -33,14 +33,14 @@ export default class TextToSVG {
     return new TextToSVG(opentype.loadSync(file));
   }
 
-  static load(url, cb) {
+  static load(url, cb, opt) {
     opentype.load(url, (err, font) => {
       if (err !== null) {
         return cb(err, null);
       }
 
       return cb(null, new TextToSVG(font));
-    });
+    }, opt);
   }
 
   getWidth(text, options) {

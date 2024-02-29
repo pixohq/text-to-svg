@@ -198,13 +198,13 @@ var TextToSVG = exports["default"] = /*#__PURE__*/function () {
     }
   }, {
     key: "load",
-    value: function load(url, cb) {
+    value: function load(url, cb, opt) {
       opentype.load(url, function (err, font) {
         if (err !== null) {
           return cb(err, null);
         }
         return cb(null, new TextToSVG(font));
-      });
+      }, opt);
     }
   }]);
   return TextToSVG;
