@@ -16157,12 +16157,17 @@ var opentype = (() => {
 
   // src/opentype.js
   function loadFromFile(path, callback) {
-    __require("fs").readFile(path, function(err, buffer) {
-      if (err) {
-        return callback(err.message);
-      }
+    if (path.startsWith("data")) {
+      const buffer = Buffer.from(path, "base64");
       callback(null, buffer);
-    });
+    } else {
+      __require("fs").readFile(path, function(err, buffer) {
+        if (err) {
+          return callback(err.message);
+        }
+        callback(null, buffer);
+      });
+    }
   }
   function loadFromUrl(url, callback) {
     if (typeof XMLHttpRequest !== "undefined") {

@@ -3813,7 +3813,7 @@ onetime@^2.0.0:
 
 "opentype.js@https://github.com/pixohq/opentype.js#master":
   version "1.3.5"
-  resolved "https://github.com/pixohq/opentype.js#87bc97a4dcea65b3a9d6d7ee3b54242614e9b69e"
+  resolved "https://github.com/pixohq/opentype.js#1b3a469bad3262b41675383a3fc8d6b3c36e612f"
   dependencies:
     eslint-plugin-local-rules "^2.0.1"
 
