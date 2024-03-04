@@ -49,7 +49,7 @@
   "dependencies": {
     "@types/opentype.js": "^1.3.8",
     "commander": "^2.11.0",
-    "opentype.js": "https://github.com/pixohq/opentype.js#master"
+    "opentype.js": "^1.3.4"
   },
   "devDependencies": {
     "@babel/core": "^7.3.4",
